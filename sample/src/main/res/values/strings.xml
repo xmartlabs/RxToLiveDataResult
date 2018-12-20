@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rx to LiveData Result Sample App</string>
+    <string name="error_message">Opps, something went wrong!</string>
+    <string name="kotlin_trending_repos">Kotlin Trending Repos</string>
+
+    <plurals name="starCount">
+        <item quantity="one" formatted="true">%1$d star</item>
+        <item quantity="other" formatted="true">%1$d stars</item>
+    </plurals>
+</resources>
