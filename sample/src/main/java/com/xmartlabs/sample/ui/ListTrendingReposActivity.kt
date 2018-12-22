@@ -10,8 +10,8 @@ import com.xmartlabs.rxtolivedataresult.Result
 import com.xmartlabs.sample.R
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
-import kotlinx.android.synthetic.main.activity_list_trending.*
 import javax.inject.Inject
+import kotlinx.android.synthetic.main.activity_list_trending.*
 
 class ListTrendingReposActivity : AppCompatActivity(), HasSupportFragmentInjector {
   @Inject

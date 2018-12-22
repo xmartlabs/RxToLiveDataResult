@@ -22,7 +22,7 @@ fun Completable.toResult(): LiveData<Result<Nothing>> {
   this
       .observeOn(Schedulers.io())
       .subscribe(object : CompletableObserver {
-        override fun onSubscribe(disposable: Disposable)=
+        override fun onSubscribe(disposable: Disposable) =
           source.postValue(Result.Loading)
 
         override fun onComplete() =

@@ -14,10 +14,10 @@ import javax.inject.Singleton
 @Singleton
 class ListTrendingReposViewModel @Inject constructor(
     private val repoRepository: RepoRepository
-): ViewModel() {
+) : ViewModel() {
   private val refresh: MutableLiveData<Any> = MutableLiveData()
 
-  val trendingRepositories = Transformations.switchMap(refresh){
+  val trendingRepositories = Transformations.switchMap(refresh) {
     repoRepository.getTrendingRepositories()
         .toResult()
   }

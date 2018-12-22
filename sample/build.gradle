@@ -6,8 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion project.ext.compileSdkVersion
-    buildToolsVersion project.ext.buildToolsVersion
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
     defaultConfig {
         applicationId "com.xmartlabs.sample"
         minSdkVersion project.ext.minSdkVersion
@@ -28,18 +28,12 @@ android {
 }
 
 dependencies {
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-
     implementation "com.android.support:appcompat-v7:${libraryVersion.androidSupport}"
     implementation "com.android.support:design:${libraryVersion.androidSupport}"
+    implementation "com.android.support:exifinterface:${libraryVersion.androidSupport}"
     implementation "com.facebook.stetho:stetho-okhttp3:${libraryVersion.stetho}"
     implementation "com.facebook.stetho:stetho:${libraryVersion.stetho}"
     implementation "com.google.code.gson:gson:${libraryVersion.gson}"

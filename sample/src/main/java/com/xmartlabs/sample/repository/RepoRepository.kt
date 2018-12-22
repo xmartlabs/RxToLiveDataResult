@@ -1,6 +1,7 @@
 package com.xmartlabs.sample.repository
 
-import io.reactivex.schedulers.Schedulers
+import com.xmartlabs.sample.model.Repo
+import io.reactivex.Single
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -8,5 +9,5 @@ import javax.inject.Singleton
 class RepoRepository @Inject constructor(
     private val repoNetworkSource: RepoNetworkSource
 ) {
-  fun getTrendingRepositories() = repoNetworkSource.getTrendingRepositories()
+  fun getTrendingRepositories(): Single<List<Repo>> = repoNetworkSource.getTrendingRepositories()
 }
