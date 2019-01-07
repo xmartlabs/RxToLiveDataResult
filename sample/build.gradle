@@ -10,8 +10,8 @@ android {
     buildToolsVersion build_versions.build_tools
     defaultConfig {
         applicationId "com.xmartlabs.sample"
-        minSdkVersion project.ext.minSdkVersion
-        targetSdkVersion project.ext.targetSdkVersion
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode project.ext.librariesVersionCode
         versionName project.ext.librariesVersion
 
@@ -24,7 +24,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -53,7 +52,6 @@ dependencies {
     kapt "android.arch.persistence.room:compiler:${libraryVersion.archRoom}"
     kapt "com.google.dagger:dagger-android-processor:${libraryVersion.dagger}"
     kapt "com.google.dagger:dagger-compiler:${libraryVersion.dagger}"
-
 
     testImplementation "junit:junit:${libraryVersion.junit}"
 }
